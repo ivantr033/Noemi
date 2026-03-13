@@ -8,67 +8,82 @@
 </head>
 <body>
     <!-- Header / Navegación -->
-    <header class="main-header">
-        <div class="nav-container">
-            <img class= "logo" src="sources/svg/noemi-logo.svg" alt="Noemi logo">
-            <nav class="nav-menu">
-                <a href="#">Главная</a>
-                <a href="#">посты</a>
-                <a href="#">статьи</a>
-                <a href="#">теги</a>
-                <a href="#">темы</a>
-                <a href="#">контакты</a>
-            </nav>
+    <header class="header">
+        <div class="header-banner">
+            <img src="sources/img/banner-bg.jpg" alt="Noemi banner">
         </div>
-        <div class="header__title-container">
-            <h1 class="header__tittle">Блог о творчестве, спорте, и образе жизни</h1>
+        <nav class="nav">
+            <div class="logo">
+                <img class= "logo" src="sources/svg/noemi-logo.svg" alt="Noemi logo">
+            </div>
+            <div>
+                <ul class="nav-menu">
+                    <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">посты</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">статьи</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">теги</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">темы</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">контакты</a></li>
+                </ul>
+            </div>
+            <div class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        
+        <div class="header__title">
+            <h1>Блог о творчестве, спорте, и образе жизни</h1>
         </div>
     </header>
 
     <!-- Trending Section (Flexbox Row) -->
     <section class="trending-container">
-        <p class="section-title">Сейчас в тренде</p>
-        <div class="line-divider"></div>
+        <div class="section-title__container">
+            <h2 class="section-title">Сейчас в тренде</h2>
+            <div class="line-divider"></div>
+        </div>
         
         <div class="trending-flex">
             <div class="trend-card card-1">
                 <a href="#"><img src="sources/img/trend1.jpg" alt="сад на подоконнике"></a>
                 <div class="trend-card__data">
-                    <div class="trend-card__tags">
-                        <a href="#">Lifestyle</a>
-                        <a href="#">INTERIOR</a>
-                    </div>
-                    <a href="#"><p class="trend-card__title">Сейчас в тренде: сад на подоконнике</p></a>
+                    <ul class="trend-card__tags">
+                        <li><a href="#">Lifestyle</a></li>
+                        <li><a href="#">INTERIOR</a></li>
+                    </ul>
+                    <a href="#"><h2 class="trend-card__title">Сейчас в тренде: сад на подоконнике</h2></a>
                 </div>
             </div>
 
             <div class="trend-card card-2">
                 <a href="#"><img src="sources/img/trend2.jpg" alt="сыры на красивых картинках"></a>
                 <div class="trend-card__data">
-                    <div class="trend-card__tags">
-                        <a href="#">Food</a>
-                    </div>
-                    <a href="#"><p class="trend-card__title">сыры на красивых картинках из интернета: какие они на вкус?</p></a>
+                    <ul class="trend-card__tags">
+                        <li><a href="#">Food</a></li>
+                    </ul>
+                    <a href="#"><h2 class="trend-card__title">сыры на красивых картинках из интернета: какие они на вкус?</h2></a>
                 </div>
             </div>
             <div class="trend-card card-3">
                 <a href="#"><img src="sources/img/trend3.jpg" alt="ПЕРВЫЙ ПОХОД В ГОРЫ"></a>
                 <div class="trend-card__data">
-                    <div class="trend-card__tags">
-                        <a href="#">Lifestyle</a>
-                        <a href="#">tRAVEL</a>
-                    </div>
-                    <a href="#"><p class="trend-card__title">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</p></a>
+                    <ul class="trend-card__tags">
+                        <li><a href="#">Lifestyle</a></li>
+                        <li><a href="#">tRAVEL</a></li>
+                    </ul>
+                    <a href="#"><h2 class="trend-card__title">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</h2></a>
                 </div>
             </div>
             <div class="trend-card card-4">
                 <a href="#"><img src="sources/img/trend4.jpg" alt="лимоны"></a>
                 <div class="trend-card__data">
-                    <div class="trend-card__tags">
-                        <a href="#">food</a>
-                        <a href="#">health</a>
-                    </div>
-                    <a href="#"><p class="trend-card__title">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</p></a>
+                    <ul class="trend-card__tags">
+                        <li><a href="#">food</a></li>
+                        <li><a href="#">health</a></li>
+                    </ul>
+                    <a href="#"><h2 class="trend-card__title">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</h2></a>
                 </div>
             </div>
         </div>
@@ -82,10 +97,10 @@
             <article class="post">
                 <a href="#"><img src="sources/img/last-post1.jpg" alt="Вид на солнечный пляж"></a>
                 <div class="post-text">
-                    <div class="post__tags">
-                        <a href="#">Travel</a>
-                        <a href="#">Health</a>
-                    </div>
+                    <ul class="post__tags">
+                        <li><a href="#">Travel</a></li>
+                        <li><a href="#">Health</a></li>
+                    </ul>
                     <a href="#"><h2 class="post__title">10 мест, ради которых стоит проснуться на рассвете</h2></a>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
@@ -98,10 +113,10 @@
             <article class="post">
                 <a href="#"><img src="sources/img/last-post2.jpg" alt="Женщина занимается йогой на берегу пляжа."></a>
                 <div class="post-text">
-                    <div class="post__tags">
-                        <a href="#">health</a>
-                        <a href="#">lifestyle</a>
-                    </div>
+                    <ul class="post__tags">
+                        <li><a href="#">health</a></li>
+                        <li><a href="#">lifestyle</a></li>
+                    </ul>
                     <a href="#"><h2 class="post__title">ЙОга для начинающих в домашних условиях</h2></a>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
@@ -114,9 +129,9 @@
             <article class="post">
                 <a href="#"><img src="sources/img/last-post3.jpg" alt="Группа людей наслаждается концертом"></a>
                 <div class="post-text">
-                    <div class="post__tags">
-                        <a href="#">music</a>
-                    </div>
+                    <ul class="post__tags">
+                        <li><a href="#">music</a></li>
+                    </ul>
                     <a href="#"><h2 class="post__title">Лучшие музыкальные фестивали этого лета</h2></a>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
@@ -132,10 +147,10 @@
             <article class="post">
                 <a href="#"><img src="sources/img/last-post4.jpg" alt="Стол с изысканными блюдами"></a>
                 <div class="post-text">
-                    <div class="post__tags">
-                        <a href="#">LYFESTYLE</a>
-                        <a href="#">FOOD</a>
-                    </div>
+                    <ul class="post__tags">
+                        <li><a href="#">LYFESTYLE</a></li>
+                        <li><a href="#">FOOD</a></li>
+                    </ul>
                     <a href="#"><h2 class="post__title">Наукоёмкий подход к кулинарии</h2></a>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
@@ -148,11 +163,11 @@
             <article class="post">
                 <a href="#"><img src="sources/img/last-post5.jpg" alt="Подушка с оригинальным принтом"></a>
                 <div class="post-text">
-                    <div class="post__tags">
-                        <a href="#">LYFESTYLE</a>
-                        <a href="#">INTERIOR</a>
-                        <a href="#">art</a>
-                    </div>
+                    <ul class="post__tags">
+                        <li><a href="#">LYFESTYLE</a></li>
+                        <li><a href="#">INTERIOR</a></li>
+                        <li><a href="#">art</a></li>
+                    </ul>
                     <a href="#"><h2 class="post__title">делаем модные принты на подушках для интерьера </h2></a>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
@@ -172,50 +187,50 @@
             <div class="new-posts">
                 <a href="#">
                     <div href="#" class="new-post">
-                        <img class="new-post__img" src="sources/img/2.jpg" alt="Пляж">
+                        <img src="sources/img/2.jpg" alt="Пляж">
                         <div class="new-post__text">
-                            <p class="new-post__data">14 июня 2019</p>
-                            <p class="new-post__title">10 мест, ради которых стоит проснуться</p>
+                            <span class="new-post__date">14 июня 2019</span>
+                            <h3 class="new-post__title">10 мест, ради которых стоит проснуться</h3>
                         </div>
                     </div>
                 </a>
 
                 <a href="#">
                     <div class="new-post">
-                        <img class="new-post__img" src="sources/img/151.jpg" alt="Йога">
+                        <img src="sources/img/151.jpg" alt="Йога">
                         <div class="new-post__text">
-                            <p class="new-post__data">14 июня 2019</p>
-                            <p class="new-post__title">Йога для домашних</p>
+                            <span class="new-post__date">14 июня 2019</span>
+                            <h3 class="new-post__title">Йога для домашних</h3>
                         </div>
                     </div>
                 </a>
 
                 <a href="#">
                     <div class="new-post">
-                        <img class="new-post__img" src="sources/img/45.jpg" alt="Квартира">
+                        <img src="sources/img/45.jpg" alt="Квартира">
                         <div class="new-post__text">
-                            <p class="new-post__data">14 июня 2019</p>
-                            <p class="new-post__title">как мы превратили классное место в балкон</p>
+                            <span class="new-post__date">14 июня 2019</span>
+                            <h3 class="new-post__title">как мы превратили классное место в балкон</h3>
                         </div>
                     </div>
                 </a>
 
                 <a href="#">
                     <div class="new-post">
-                        <img class="new-post__img" src="sources/img/501.jpg" alt="Еда">
+                        <img src="sources/img/501.jpg" alt="Еда">
                         <div class="new-post__text">
-                            <p class="new-post__data">14 июня 2019</p>
-                            <p class="new-post__title">Кулинарный подход к науке</p>
+                            <span class="new-post__date">14 июня 2019</span>
+                            <h3 class="new-post__title">Кулинарный подход к науке</h3>
                         </div>
                     </div>
                 </a>
 
                 <a href="#">
                     <div class="new-post">
-                        <img class="new-post__img" src="sources/img/7.jpg" alt="Длинные волосы">
+                        <img src="sources/img/7.jpg" alt="Длинные волосы">
                         <div class="new-post__text">
-                            <p class="new-post__data">14 июня 2019</p>
-                            <p class="new-post__title">лучшие прически для распущенных волос</p>
+                            <span class="new-post__date">14 июня 2019</span>
+                            <h3 class="new-post__title">лучшие прически для распущенных волос</h3>
                         </div>
                     </div>
                 </a>
@@ -283,7 +298,9 @@
                     <img src="sources/img/shop-item-desk1.jpg" alt="Подушка">
                 </div>
                 <div class="product-card__content">
-                    <h3>ПОДУШКИ НА ДИВАН</h3>
+                    <div class="product-card__title">
+                        <h3>ПОДУШКИ НА ДИВАН</h3>
+                    </div>
                     <p class="product-card__description">Набор из двух подушек с модными принтами. Видео о создании <a href="#">здесь.</a></p>
                     <div class="product-card__footer">
                         <div class="product-card__price">
@@ -300,14 +317,16 @@
                     <img src="sources/img/shop-item-desk2.jpg" alt="Кукла">
                 </div>
                 <div class="product-card__content">
-                    <h3>Кукла «Зайчик»</h3>
+                    <div class="product-card__title">
+                        <h3>Кукла «Зайчик»</h3>
+                    </div>
                     <p class="product-card__description">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#">весенняя серия постов</a> в блоге и несколько подкастов.</p>
                     <div class="product-card__footer">
                         <div class="product-card__price">
                             <p class="product-card__oldprice"></p>
                             <p class="product-card__current-price">3500 ₽</p>
                         </div>
-                        <a href="#" class="product-card__btn">В МАГАЗИН</a>
+                        <a href="#" button class="product-card__btn">В МАГАЗИН</a>
                     </div>
                 </div>
             </div>
@@ -317,7 +336,9 @@
                     <img src="sources/img/shop-item-desk3.jpg" alt="Рамка">
                 </div>
                 <div class="product-card__content">
-                    <h3>Шестиугольная рамка</h3>
+                    <div class="product-card__title">
+                        <h3>Шестиугольная рамка</h3>
+                    </div>
                     <p class="product-card__description">Необычная рамка для украшения дома из видео <a href="#">«Как сделать рамку из подручных средств за 30 минут»</a></p>
                     <div class="product-card__footer">
                         <div class="product-card__price">
