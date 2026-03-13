@@ -1,3 +1,7 @@
+:root {
+    --c-type: inline-size;
+}
+
 @font-face {
     font-family: 'opensans-bold';
     src: url('../fonts/OpenSans-Bold.woff2') format('woff2');
@@ -19,7 +23,6 @@ body {
     margin: 0;
 }
 
-
 a {
     text-decoration: none;
     font-family: "opensans-regular", sans-serif;
@@ -33,7 +36,7 @@ ul {
 h1 {
     font-family: "opensans-bold", sans-serif;
     margin: 0;
-    font-size: clamp(10px, 2.7cqw, 45px);
+    font-size: 45px;
 }
 
 
@@ -96,14 +99,14 @@ h1 {
 }
 
 .logo {
-    width: clamp(100px, 10.84cqw, 180px);
+    width: 180px;
     z-index: 10;
     align-content: center;
 }
 
-.nav-menu a:hover {
+/* .nav-menu a:hover {
     color: #b59f5b;
-}
+} */
 
 .nav, .header__title, .nav li {
     z-index: 10;
@@ -127,7 +130,6 @@ h1 {
     width: 100%;
     background-color: #fff;
     border-radius: 3px;
-    /* transition: all 0.3s ease; */
 }
 
 .header__title {
@@ -160,7 +162,6 @@ h1 {
     font-family: "opensans-bold", sans-serif;
     color: #000000;
     font-size: 20px;
-    /* font-size: clamp(10px, 1.20cqw, 20px); */
     text-transform: uppercase;
 }
 
@@ -195,7 +196,7 @@ h1 {
     display: flex;
     align-items: flex-end;
     overflow: hidden;
-    container-type: inline-size;
+    container-type: var(--c-type);
 }
 
 .trend-card::before {
@@ -232,7 +233,7 @@ h1 {
 .trend-card__data {
     position: absolute;
     border: 3px solid #b59f5b;
-    padding: clamp(20px, 7.767cqw, 32px);
+    padding: 32px;
     left: 20px;
     right: 22px;
     bottom: 17px;
@@ -258,16 +259,15 @@ h1 {
 .trend-card__tags a {
     /* font-size: 14px; */
     /* line-height: 30px; */
-    font-size: clamp(14px, 3.398cqw, 21px);
+    font-size: 21px;
     color: #b59f5b;
     text-decoration: none;
     font-family: "opensans-bold", sans-serif;
 }
 
 .trend-card__title {
-    /* font-size: 21px; */
+    font-size: 21px;
     /* line-height: 24px; */
-    font-size: clamp(16px, 5.097cqw, 21px);
     line-height: 1.2;
     margin: 0;
 
@@ -284,7 +284,7 @@ h1 {
 /* -------------------------------------- Main Layout (Blog + Sidebar) ----------------------------------- */
 .main-layout {
     display: flex;
-    container-type: inline-size;
+    container-type: var(--c-type);
     margin-top: 61px;
     
 
@@ -296,8 +296,8 @@ h1 {
     margin-left: auto;
     margin-right: auto;
 
-    padding-left: clamp(50px, 21.86cqw - 117.88px, 245px);
-    padding-right: clamp(50px, 20.516cqw - 107.57px, 233px);
+    padding-left: 245px;
+    padding-right: 233px;
 }
 
 
@@ -311,8 +311,7 @@ h1 {
 
 .post {
     display: flex;
-    /* gap: 30px; */
-    gap: 1.80cqw;
+    gap: 30px;
     font-family: "opensans-bold", sans-serif;
 }
 
@@ -326,7 +325,7 @@ h1 {
 }
 
 .post img {
-    width: 22.95cqw;
+    width: 381px;
     aspect-ratio: 381/294;
     object-fit: cover;
     display: block;
@@ -339,15 +338,13 @@ h1 {
 }
 
 .post__tags a {
-    /* font-size: 14px; */
-    font-size: clamp(10px, 0.84cqw, 14px);
+    font-size: 14px;
     color: #b59f5b;
     /* line-height: 24px; */
 }
 
 .post__title {
-    /* font-size: 20px; */
-    font-size: clamp(12px, 1.20cqw, 20px);
+    font-size: 20px;
     /* line-height: 24px; */
     margin-top: 5px;
     margin-right: 3.91cqw;
@@ -357,8 +354,7 @@ h1 {
 .post__data-author {
     display: flex;
     gap: 11px;
-    /* font-size: 12px; */
-    font-size: clamp(6px, 0.72cqw, 12px);
+    font-size: 12px;
      /* margin-top: 29px; */
     margin-top: 2.416em;
 }
@@ -373,15 +369,11 @@ h1 {
 }
 
 .post__description {
-    /* font-size: 15px; */
-    font-size: clamp(8px, 0.90cqw, 15px);
+    font-size: 15px;
     font-family: "opensans-regular", sans-serif;
     /* line-height: 22px; */
-    /* margin-top: 45px; */
-    /* margin-top: 2.71cqw; */
-    margin-top: 1.71cqw;
+    margin-top: 45px;
     color: #000000;
-    /* margin-right: 5.24cqw; */
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -425,7 +417,7 @@ h1 {
 
 .new-post {
     display: flex;
-    align-items: left;
+    align-items: start;
     gap: 18px;
     padding: 0;
 
@@ -791,6 +783,59 @@ h1 {
     background-color: #f0f0f0;
 } */
 
+@supports (font-size: clamp(1px, 1cqw, 1px)) {
+    h1 {
+        font-size: clamp(10px, 2.7cqw, 45px);
+    }
+
+    .logo {
+    width: clamp(100px, 10.84cqw, 180px);
+    }
+
+    .trend-card__data {
+        padding: clamp(20px, 7.767cqw, 32px);
+    }
+
+    .trend-card__tags a {
+        font-size: clamp(14px, 3.398cqw, 21px);
+    }
+
+    .trend-card__title {
+        font-size: clamp(16px, 5.097cqw, 21px);
+    }
+
+    .main-layout, .shop-section {
+        padding-left: clamp(50px, 21.86cqw - 117.88px, 245px);
+        padding-right: clamp(50px, 20.516cqw - 107.57px, 233px);
+    }
+
+    .post__tags a {
+        font-size: clamp(10px, 0.84cqw, 14px);
+    }
+
+    .post__title {
+        font-size: clamp(12px, 1.20cqw, 20px);
+    }
+
+    .post__data-author {
+        font-size: clamp(6px, 0.72cqw, 12px);
+    }
+
+    .post__description {
+        font-size: clamp(8px, 0.90cqw, 15px);
+        margin-top: 1.71cqw;
+    }
+}
+/* container-type: var(--c-type); */
+@supports (gap: 1cqw) {
+    .post {
+        gap: 1.80cqw;
+    }
+
+    .post img {
+        width: 22.95cqw;
+    }
+}
 
 @media (max-width: 768px) {
     .trend-card {
