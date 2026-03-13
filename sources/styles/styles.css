@@ -550,18 +550,18 @@ h1 {
     margin-top: 24px;
 }
 
-.tags-items a {
+.tags-items li a {
     text-decoration: none;
-}
-
-.tags-item {
-    padding: 4px 13px;
-    border: 3px solid #eeeeee;
     font-family: "opensans-bold", sans-serif;
     font-size: 12px;
     color: #000000;
     text-transform: uppercase;
     list-style: none;
+}
+
+.tags-item {
+    padding: 4px 13px;
+    border: 3px solid #eeeeee;
 }
 
 /* -------------- TOPICS BLOCK --------------- */
@@ -579,7 +579,7 @@ h1 {
     text-decoration: none;
 }
 
-.topics-list li {
+.topics-list li a {
     display: flex;
     align-items: flex-start;
     font-size: 14px;
@@ -777,7 +777,7 @@ h1 {
 }
 
 /* ------------- HOVER EFFECTS -------------- */
-.email-button:hover,
+/* .email-button:hover,
 .btn-send:hover,
 .product-card__btn:hover,
 .search-button:hover {
@@ -789,7 +789,7 @@ h1 {
 .topics-list li:hover,
 .radio-custom:hover .circle {
     background-color: #f0f0f0;
-}
+} */
 
 
 @media (max-width: 768px) {
