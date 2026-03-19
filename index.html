@@ -14,7 +14,7 @@
         </div>
         <nav class="nav">
             <div class="logo">
-                <img class= "logo" src="sources/svg/noemi-logo.svg" alt="Noemi logo">
+                <img src="sources/svg/noemi-logo.svg" alt="Noemi logo">
             </div>
             <div>
                 <ul class="nav-menu">
@@ -34,15 +34,21 @@
         </nav>
         
         <div class="header__title">
-            <h1>Блог о творчестве, спорте, и образе жизни</h1>
+            <div class="logo-telef">
+                <img src="sources/svg/noemi-logo.svg" alt="Noemi logo">
+            </div>
+            <h1>Блог о творчестве, спорте, и образе жизни
+                <!-- Я не смог завершить внесение всех исправлений на сайт, 
+            потому что моя работа отнимает у меня много времени. 
+            Пожалуйста, мне нужно больше времени. -->
+            </h1>
         </div>
     </header>
 
     <!-- Trending Section (Flexbox Row) -->
     <section class="trending-container">
-        <div class="section-title__container">
-            <h2 class="section-title">Сейчас в тренде</h2>
-            <div class="line-divider"></div>
+        <div class="section-title">
+            <h2>Сейчас в тренде</h2>
         </div>
         
         <div class="trending-flex">
@@ -53,7 +59,7 @@
                         <li><a href="#">Lifestyle</a></li>
                         <li><a href="#">INTERIOR</a></li>
                     </ul>
-                    <a href="#"><h2 class="trend-card__title">Сейчас в тренде: сад на подоконнике</h2></a>
+                    <h2 class="trend-card__title"><a href="#">Сейчас в тренде: сад на подоконнике</a></h2>
                 </div>
             </div>
 
@@ -63,7 +69,7 @@
                     <ul class="trend-card__tags">
                         <li><a href="#">Food</a></li>
                     </ul>
-                    <a href="#"><h2 class="trend-card__title">сыры на красивых картинках из интернета: какие они на вкус?</h2></a>
+                    <h2 class="trend-card__title"><a href="#">сыры на красивых картинках из интернета: какие они на вкус?</a></h2>
                 </div>
             </div>
             <div class="trend-card card-3">
@@ -73,7 +79,7 @@
                         <li><a href="#">Lifestyle</a></li>
                         <li><a href="#">tRAVEL</a></li>
                     </ul>
-                    <a href="#"><h2 class="trend-card__title">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</h2></a>
+                    <h2 class="trend-card__title"><a href="#">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</a></h2>
                 </div>
             </div>
             <div class="trend-card card-4">
@@ -83,7 +89,7 @@
                         <li><a href="#">food</a></li>
                         <li><a href="#">health</a></li>
                     </ul>
-                    <a href="#"><h2 class="trend-card__title">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</h2></a>
+                    <h2 class="trend-card__title"><a href="#">Сейчас в тренде: сКОЛЬКО ВИТАМИНА c В ЛИМОНАХ?</a></h2>
                 </div>
             </div>
         </div>
@@ -101,12 +107,14 @@
                         <li><a href="#">Travel</a></li>
                         <li><a href="#">Health</a></li>
                     </ul>
-                    <a href="#"><h2 class="post__title">10 мест, ради которых стоит проснуться на рассвете</h2></a>
+                    <h2 class="post__title"><a href="#">10 мест, ради которых стоит проснуться на рассвете</a></h2>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
                         <span class="post__author">Неизвестный автор</span>
                     </div>
-                    <p class="post__description">Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
+                    <div class="post__description">
+                        <p>Итак, вы в Питере. Раннее утро. Лед с рек и каналов уже ушел, запущены фонтаны города… Музеи еще закрыты. Что посмотреть?</p>
+                    </div>
                 </div>
             </article>
 
@@ -117,12 +125,14 @@
                         <li><a href="#">health</a></li>
                         <li><a href="#">lifestyle</a></li>
                     </ul>
-                    <a href="#"><h2 class="post__title">ЙОга для начинающих в домашних условиях</h2></a>
+                    <h2 class="post__title"><a href="#">ЙОга для начинающих в домашних условиях</a></h2>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
                         <span class="post__author">Неизвестный автор</span>
                     </div>
-                    <p class="post__description">Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.</p>
+                    <div class="post__description">
+                        <p>Расскажем, какие упражнения выбрать и как сделать коврик для занятий йогой из того, что можно найти в шкафу.</p>
+                    </div>
                 </div>
             </article>
 
@@ -132,14 +142,14 @@
                     <ul class="post__tags">
                         <li><a href="#">music</a></li>
                     </ul>
-                    <a href="#"><h2 class="post__title">Лучшие музыкальные фестивали этого лета</h2></a>
+                    <h2 class="post__title"><a href="#">Лучшие музыкальные фестивали этого лета</a></h2>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
                         <span class="post__author">Неизвестный автор</span>
                     </div>
                     <div class="post__description">
-                    <p>Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
-                    <p>Мы составили список лучших летних фестивалей по всему миру.</p>
+                        <p>Лето на носу, а с ним и музыкальные фестивали. На каком же из них вы разобьёте свою палатку?</p>
+                        <p>Мы составили список лучших летних фестивалей по всему миру.</p>
                     </div>
                 </div>
             </article>
@@ -151,12 +161,14 @@
                         <li><a href="#">LYFESTYLE</a></li>
                         <li><a href="#">FOOD</a></li>
                     </ul>
-                    <a href="#"><h2 class="post__title">Наукоёмкий подход к кулинарии</h2></a>
+                    <h2 class="post__title"><a href="#">Наукоёмкий подход к кулинарии</a></h2>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
                         <span class="post__author">Неизвестный автор</span>
                     </div>
-                    <p class="post__description">Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
+                    <div class="post__description">
+                        <p>Узнаем основы проектирования новых пищевых и около-пищевых опытов, вскроем физику, химию и микробиологию еды.</p>
+                    </div>
                 </div>
             </article>
 
@@ -168,22 +180,22 @@
                         <li><a href="#">INTERIOR</a></li>
                         <li><a href="#">art</a></li>
                     </ul>
-                    <a href="#"><h2 class="post__title">делаем модные принты на подушках для интерьера </h2></a>
+                    <h2 class="post__title"><a href="#">делаем модные принты на подушках для интерьера</a></h2>
                     <div class="post__data-author">
                         <span class="post__data">10 июня 2019</span>
                         <span class="post__author">Неизвестный автор</span>
                     </div>
-                    <p class="post__description">Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
+                    <div class="post__description">
+                        <p>Подушки для дивана целесообразнее заказать в съемных чехлах на молнии, если потребуется чистка подушек, проще снять чехлы, чем везти подушку в химчистку.</p>
+                    </div>
                 </div>
             </article>
         </main>
 
         <!-- Sidebar -->
         <aside class="sidebar">
-            <div class="sidebar-header">
-                <h3 class="sidebar-title">Новые посты</h3>
-                <div class="sidebar-line"></div>
-            </div>
+            <h3 class="sidebar-title">Новые посты</h3>
+
             <div class="new-posts">
                 <a href="#">
                     <div class="new-post">
@@ -245,19 +257,15 @@
             </form>
 
             <form class="email">
-                <div class="sidebar-header">
-                    <h3 class="sidebar-title">Рассылка</h3>
-                    <div class="sidebar-line"></div>
-                </div>
+                <h3 class="sidebar-title">Рассылка</h3>
+                
                 <input class="email-input" type="email" placeholder="Ваш email-адрес" required>
                 <button type="submit" class="email-button">Подписаться</button>
             </form>
                 
             <div class="tags">
-                <div class="sidebar-header">
-                    <h3 class="sidebar-title">Теги</h3>
-                    <div class="sidebar-line"></div>
-                </div>
+                <h3 class="sidebar-title">Теги</h3>
+
                 <ul class="tags-items">
                     <li class="tags-item"><a href="#">fashion</a></li>
                     <li class="tags-item"><a href="#">music</a></li>
@@ -271,10 +279,8 @@
             </div>
 
             <div class="topics">
-                <div class="sidebar-header">
-                    <h3 class="sidebar-title">Темы</h3>
-                    <div class="sidebar-line"></div>
-                </div>
+                <h3 class="sidebar-title">Темы</h3>
+
                 <ul class="topics-list">
                     <li><a href="#">Красота<span class="quantity">12</span></a></li>
                     <li><a href="#">Здоровье<span class="quantity">4</span></a></li>
@@ -290,8 +296,9 @@
 
     <!-- Shop Section -->
     <section class="shop-section">
-        <h2 class="section-title">Наши изделия</h2>
-        <div class="line-divider"></div>
+        <div class="section-title">
+            <h2>Наши изделия</h2>
+        </div>
         <div class="shop-flex">
             <div class="product-card">
                 <div class="product-card__image">
@@ -304,8 +311,8 @@
                     <p class="product-card__description">Набор из двух подушек с модными принтами. Видео о создании <a href="#">здесь.</a></p>
                     <div class="product-card__footer">
                         <div class="product-card__price">
-                            <p class="product-card__oldprice">1000 ₽</p>
-                            <p class="product-card__current-price">800 ₽</p>
+                            <span class="product-card__oldprice">1000 ₽</span>
+                            <span class="product-card__current-price">800 ₽</span>
                         </div>
                         <a href="#" class="product-card__btn">В МАГАЗИН</a>
                     </div>
@@ -323,8 +330,8 @@
                     <p class="product-card__description">Интерьерная рукодельная кукла «Зайчик», созданию которой посвящена <a href="#">весенняя серия постов</a> в блоге и несколько подкастов.</p>
                     <div class="product-card__footer">
                         <div class="product-card__price">
-                            <p class="product-card__oldprice"></p>
-                            <p class="product-card__current-price">3500 ₽</p>
+                            <span class="product-card__oldprice"></span>
+                            <span class="product-card__current-price">3500 ₽</span>
                         </div>
                         <a href="#" class="product-card__btn">В МАГАЗИН</a>
                     </div>
@@ -342,8 +349,8 @@
                     <p class="product-card__description">Необычная рамка для украшения дома из видео <a href="#">«Как сделать рамку из подручных средств за 30 минут»</a></p>
                     <div class="product-card__footer">
                         <div class="product-card__price">
-                            <p class="product-card__oldprice">500 ₽</p>
-                            <p class="product-card__current-price">400 ₽</p>
+                            <span class="product-card__oldprice">500 ₽</span>
+                            <span class="product-card__current-price">400 ₽</span>
                         </div>
                         <a href="#" class="product-card__btn">В МАГАЗИН</a>
                     </div>
