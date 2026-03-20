@@ -33,17 +33,17 @@ ul {
 /* ------------------------------------------------- Header ----------------------------------------------- */
 .header {
     width: 100%;
-    aspect-ratio: 1660 / 450;
+    /* aspect-ratio: 1660 / 450; */
     min-height: 450px;
     position: relative;
     overflow: hidden;
 
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
 
-    max-width: 1660px;
-    flex-grow: 1;
+    /* max-width: 1660px; */
+    /* flex-grow: 1; */
 }
 
 .header-banner img {
@@ -129,33 +129,16 @@ ul {
 }
 
 .header__title {
-    /* width: 100%;
-    height: 100%; */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 45px;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    /* padding: 50px 70px; */
-}
-
-.header__title h1 {
-    /* width: 100%; */
-    max-width: 44%;
-    /* width: clamp(44px, 60%, 90%); */
-
     font-family: "opensans-bold", sans-serif;
     font-size: 45px;
     line-height: 75px;
+    color: #fff;
     text-align: center;
-    text-wrap: pretty;
-    margin: 0 auto;
+    text-wrap: balance;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: translateY(-34px); /* ADJUSTING */
+    padding: 80px 70px 40px;
 }
 
 /* -------------------------------------------------- Trending --------------------------------------------------- */
@@ -245,8 +228,8 @@ ul {
     position: absolute;
     border: 3px solid #b59f5b;
     padding: 32px;
-    left: 20px;
-    right: 22px;
+    left: 21px;
+    right: 21px;
     bottom: 17px;
     max-height: 80%;
 
@@ -269,16 +252,15 @@ ul {
 .trend-card__tags a {
     /* font-size: 14px; */
     /* line-height: 30px; */
-    font-size: 21px;
+    font-size: 14px;
     color: #b59f5b;
     text-decoration: none;
     font-family: "opensans-bold", sans-serif;
 }
 
 .trend-card__title {
-    font-size: 21px;
-    /* line-height: 24px; */
-    line-height: 1.2;
+    font-size: 20px;
+    line-height: 24px;
     margin: 0;
 
     display: -webkit-box;
@@ -287,6 +269,44 @@ ul {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.trend-card__title a {
+    font-family: "opensans-bold", sans-serif;
+}
+
+/* @supports (font-size: clamp(1px, 1cqw, 1px)) { */
+    /* h1 {
+        font-size: clamp(10px, 2.7cqw, 45px);
+    } */
+
+    /* .logo {
+    width: clamp(100px, 10.84cqw, 180px);
+    } */
+
+    /* .trend-card, .main-layout, .product-card {
+        container-type: inline-size;
+    }
+
+    .trend-card__data {
+        padding: clamp(20px, 7.767cqw, 32px);
+    }
+
+    .trend-card__tags a {
+        font-size: clamp(14px, 3.398cqw, 21px);
+    }
+
+    .trend-card__title {
+        font-size: clamp(16px, 5.097cqw, 21px);
+    }
+
+    .product-card {
+        flex: 0 1 calc(33.33% - (clamp(26px, 4.26cqw - 6.72px, 64px) * 2 / 3));
+    }
+
+    .product-card__title h3 {
+        font-size: clamp(17px, 5.74cqw, 20px);
+    }
+} */
 
 
 /* -------------------------------------- Main Layout (Blog + Sidebar) ----------------------------------- */
@@ -301,8 +321,6 @@ ul {
     margin-left: 6%;
     margin-right: 6%;
     max-width: 1660px;
-    /* padding-left: 245px;
-    padding-right: 233px; */
 }
 
 
@@ -314,10 +332,10 @@ ul {
     gap: 60px;
 }
 
-.post {
-    display: flexbox;
+/* .post { */
+    /* display: block; */
     /* gap: 31px; */
-}
+/* } */
 
 .post a {
     text-decoration: none;
@@ -367,12 +385,15 @@ ul {
 .post__title {
     display: block;
     font-size: 20px;
-    font-family: "opensans-bold", sans-serif;
     line-height: 24px;
     margin-top: 8px;
     /* margin-top: 1.03%; */
-    margin-right: 2.58%;
+    /* margin-right: 2.58%; */
     text-transform: uppercase;
+}
+
+.post__title a {
+    font-family: "opensans-bold", sans-serif;
 }
 
 .post__data-author {
@@ -781,39 +802,6 @@ ul {
 }
 
 /* ---------------------------------------------- MEDIA / SUPPORTS -------------------------------------------------- */
-@supports (font-size: clamp(1px, 1cqw, 1px)) {
-    /* h1 {
-        font-size: clamp(10px, 2.7cqw, 45px);
-    } */
-
-    /* .logo {
-    width: clamp(100px, 10.84cqw, 180px);
-    } */
-
-    .trend-card, .main-layout, .product-card {
-        container-type: inline-size;
-    }
-
-    .trend-card__data {
-        padding: clamp(20px, 7.767cqw, 32px);
-    }
-
-    .trend-card__tags a {
-        font-size: clamp(14px, 3.398cqw, 21px);
-    }
-
-    .trend-card__title {
-        font-size: clamp(16px, 5.097cqw, 21px);
-    }
-
-    .product-card {
-        flex: 0 1 calc(33.33% - (clamp(26px, 4.26cqw - 6.72px, 64px) * 2 / 3));
-    }
-
-    .product-card__title h3 {
-        font-size: clamp(17px, 5.74cqw, 20px);
-    }
-}
 
 @supports (gap: 1cqw) {
     .shop-flex {
@@ -853,14 +841,10 @@ ul {
     .header-banner img {
         object-position: left;
     }
-/* 
-    .header__title {
-        min-width: 85%;
-    } */
 
-    .header__title h1 {
+    .header__title {
         font-size: 40px;
-        max-width: 90%;
+        line-height: 55px;
     }
 
     /* -----------------    TRENDIG  -------------------- */
@@ -880,9 +864,9 @@ ul {
     }
 
     .trend-card__data {
-        right: 20px;
-        padding-left: 31px;
-        padding-right: 36px;
+        right: 19px;
+        padding-left: 30px;
+        padding-bottom: 26px;
     }
 
     .trend-card__tags a {
@@ -891,7 +875,7 @@ ul {
 
     .trend-card__title {
         font-size: 17px;
-        /* line-height: 22px; */
+        line-height: 22px;
     }
 
     /* --------------- Main(posts) Section ---------------- */
@@ -1014,14 +998,11 @@ ul {
     }
 
     .header__title {
-        position: absolute;
+        /* position: absolute;
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 100%;
-    }
-
-    .header__title h1 {
+        height: 100%; */
         width: 70%;
         max-width: 225px;
     }
