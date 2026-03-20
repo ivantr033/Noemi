@@ -227,7 +227,10 @@ ul {
 
     position: absolute;
     border: 3px solid #b59f5b;
-    padding: 32px;
+    
+    /* padding: 32px; */
+    padding: 7.767%;
+
     left: 21px;
     right: 21px;
     bottom: 17px;
@@ -242,7 +245,8 @@ ul {
 
 .trend-card__tags {
     display: flex;
-    gap: 0px 18px;
+    /* gap: 0px 18px; */
+    gap: 0px 1.08vw;
     flex-wrap: wrap;
 
     padding: 0;
@@ -251,16 +255,18 @@ ul {
 
 .trend-card__tags a {
     /* font-size: 14px; */
+    font-size: 0.843vw;
     /* line-height: 30px; */
-    font-size: 14px;
     color: #b59f5b;
     text-decoration: none;
     font-family: "opensans-bold", sans-serif;
 }
 
 .trend-card__title {
-    font-size: 20px;
-    line-height: 24px;
+    /* font-size: 20px; */
+    font-size: 1.2048vw;
+    /* line-height: 24px; */
+    line-height: 1.445vw;
     margin: 0;
 
     display: -webkit-box;
@@ -273,41 +279,6 @@ ul {
 .trend-card__title a {
     font-family: "opensans-bold", sans-serif;
 }
-
-/* @supports (font-size: clamp(1px, 1cqw, 1px)) { */
-    /* h1 {
-        font-size: clamp(10px, 2.7cqw, 45px);
-    } */
-
-    /* .logo {
-    width: clamp(100px, 10.84cqw, 180px);
-    } */
-
-    /* .trend-card, .main-layout, .product-card {
-        container-type: inline-size;
-    }
-
-    .trend-card__data {
-        padding: clamp(20px, 7.767cqw, 32px);
-    }
-
-    .trend-card__tags a {
-        font-size: clamp(14px, 3.398cqw, 21px);
-    }
-
-    .trend-card__title {
-        font-size: clamp(16px, 5.097cqw, 21px);
-    }
-
-    .product-card {
-        flex: 0 1 calc(33.33% - (clamp(26px, 4.26cqw - 6.72px, 64px) * 2 / 3));
-    }
-
-    .product-card__title h3 {
-        font-size: clamp(17px, 5.74cqw, 20px);
-    }
-} */
-
 
 /* -------------------------------------- Main Layout (Blog + Sidebar) ----------------------------------- */
 .main-layout {
@@ -863,20 +834,37 @@ ul {
         aspect-ratio: 390/252;
     }
 
+    .trend-card img {
+        object-position: bottom;
+    }
+
     .trend-card__data {
         right: 19px;
-        padding-left: 30px;
-        padding-bottom: 26px;
+        padding-top: 4.16vw; /* ADJUSTING */
+        /* padding-left: 30px; */
+        padding-left: 3.9vw;
+        /* padding-bottom: 26px; */
+        padding-bottom: 3.385vw;
+        padding-right: 3.5vw;
+    }
+
+    .trend-card__tags {
+        /* gap: 0px 18px; */
+        gap: 0px 2.34vw;
     }
 
     .trend-card__tags a {
-        font-size: 14px;
+        /* font-size: 14px; */
+        font-size: 1.82vw;
     }
 
     .trend-card__title {
-        font-size: 17px;
-        line-height: 22px;
+        /* font-size: 17px; */
+        font-size: 2.21vw;
+        /* line-height: 22px; */
+        line-height: 2.86vw;
     }
+
 
     /* --------------- Main(posts) Section ---------------- */
     
