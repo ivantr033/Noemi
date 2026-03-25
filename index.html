@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NOEMI</title>
-    <link rel="stylesheet" href="sources/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="sources/styles/styles.css">
 </head>
 <body>
     <!-- Header / Navegación -->
@@ -16,8 +16,8 @@
             <div class="logo">
                 <img src="sources/svg/noemi-logo.svg" alt="Noemi logo">
             </div>
-            <div>
-                <ul class="nav-menu">
+            <div class="nav-menu">
+                <ul class="nav__items">
                     <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">посты</a></li>
                     <li class="nav__item"><a href="#" class="nav__link">статьи</a></li>
@@ -32,13 +32,13 @@
                 <span></span>
             </div>
         </nav>
-        <div class="logo-telef">
-            <img src="sources/svg/noemi-logo.svg" alt="Noemi logo">
+
+        <div class="header__title">
+            <div class="logo-telef">
+                <img src="sources/svg/noemi-logo.svg" alt="Noemi logo">
+            </div>
+            <h1>Блог о творчестве, спорте,<br> и образе жизни</h1>
         </div>
-        <h1 class="header__title">Блог о творчестве, спорте,<br> и образе жизни</h1>
-        <!-- Я не смог завершить внесение всех исправлений в сайт для финального проекта по HTML и CSS, 
-        потому что моя работа отнимает у меня много времени. 
-        Пожалуйста, мне нужно больше времени. -->
     </header>
 
     <!-- Trending Section (Flexbox Row) -->
@@ -68,6 +68,7 @@
                     <h2 class="trend-card__title"><a href="#">сыры на красивых картинках из интернета: какие они на вкус?</a></h2>
                 </div>
             </div>
+            
             <div class="trend-card card-3">
                 <a href="#"><img src="sources/img/trend3.jpg" alt="ПЕРВЫЙ ПОХОД В ГОРЫ"></a>
                 <div class="trend-card__data">
@@ -78,6 +79,7 @@
                     <h2 class="trend-card__title"><a href="#">СОБИРАЕМСЯ В ПЕРВЫЙ ПОХОД В ГОРЫ</a></h2>
                 </div>
             </div>
+            
             <div class="trend-card card-4">
                 <a href="#"><img src="sources/img/trend4.jpg" alt="лимоны"></a>
                 <div class="trend-card__data">
@@ -97,7 +99,7 @@
         <main class="blog-posts">
 
             <article class="post">
-                <a href="#"><img src="sources/img/last-post1.jpg" alt="Вид на солнечный пляж"></a>
+                <img src="sources/img/last-post1.jpg" alt="Вид на солнечный пляж">
                 <div class="post-text">
                     <ul class="post__tags">
                         <li><a href="#">Travel</a></li>
@@ -115,7 +117,7 @@
             </article>
 
             <article class="post">
-                <a href="#"><img src="sources/img/last-post2.jpg" alt="Женщина занимается йогой на берегу пляжа."></a>
+                <img src="sources/img/last-post2.jpg" alt="Женщина занимается йогой на берегу пляжа.">
                 <div class="post-text">
                     <ul class="post__tags">
                         <li><a href="#">health</a></li>
@@ -133,7 +135,7 @@
             </article>
 
             <article class="post">
-                <a href="#"><img src="sources/img/last-post3.jpg" alt="Группа людей наслаждается концертом"></a>
+                <img src="sources/img/last-post3.jpg" alt="Группа людей наслаждается концертом">
                 <div class="post-text">
                     <ul class="post__tags">
                         <li><a href="#">music</a></li>
@@ -151,7 +153,7 @@
             </article>
 
             <article class="post">
-                <a href="#"><img src="sources/img/last-post4.jpg" alt="Стол с изысканными блюдами"></a>
+                <img src="sources/img/last-post4.jpg" alt="Стол с изысканными блюдами">
                 <div class="post-text">
                     <ul class="post__tags">
                         <li><a href="#">LYFESTYLE</a></li>
@@ -169,10 +171,10 @@
             </article>
 
             <article class="post">
-                <a href="#"><img src="sources/img/last-post5.jpg" alt="Подушка с оригинальным принтом"></a>
+                <img src="sources/img/last-post5.jpg" alt="Подушка с оригинальным принтом">
                 <div class="post-text">
                     <ul class="post__tags">
-                        <li><a href="#">LYFESTYLE</a></li>
+                        <li><a href="#">LIFESTYLE</a></li>
                         <li><a href="#">INTERIOR</a></li>
                         <li><a href="#">art</a></li>
                     </ul>

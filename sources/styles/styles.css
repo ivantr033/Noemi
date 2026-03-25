@@ -13,6 +13,8 @@ body {
     padding: 0;
     font-family: "opensans-regular", sans-serif;
     color: #fff;
+    min-width: 320px;
+    /* overflow-x: hidden; */
 }
 
 a {
@@ -41,9 +43,6 @@ ul {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-
-    /* max-width: 1660px; */
-    /* flex-grow: 1; */
 }
 
 .header-banner img {
@@ -74,35 +73,52 @@ ul {
 }
 
 .nav {
-    margin-top: 28px;
+    margin: 28px auto 0px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    font-size: 13px;
+    width: 91%;
+    min-width: min-content;
 }
 
 .nav-menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav__items {
     display: flex;
     margin: 0;
-    gap: 35px;
+    gap: 0 34px;
+    flex-wrap: wrap;
+}
+
+.nav__item {
+    white-space: nowrap;
+    font-size: 13px;
+    font-family: "opensans-regular", sans-serif;
+}
+
+.nav__item:hover {
+    text-decoration: underline;
 }
 
 .logo-telef {
     display: none;
-    width: 70%;
-    max-width: 225px;
     z-index: 10;
 }
 
 .logo img {
     width: 100%;
-    margin-left: 4px;   /* ADJUSTING */
+    margin-left: 2px;   /* ADJUSTING */
 }
 
 .logo {
     width: 180px;
     z-index: 10;
     align-content: center;
+    flex-shrink: 0;
 }
 
 .nav, .header__title, .nav li {
@@ -129,16 +145,25 @@ ul {
 }
 
 .header__title {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; /* ADJUSTING */
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 48px;
+    padding-bottom: 40px;
+    width: 70.48vw;
+    max-width: 1660px;
+    align-items: center;
+}
+
+.header__title h1 {
     font-family: "opensans-bold", sans-serif;
     font-size: 45px;
     line-height: 75px;
     color: #fff;
     text-align: center;
     text-wrap: balance;
-    margin-top: auto;
-    margin-bottom: auto;
-    transform: translateY(-34px); /* ADJUSTING */
-    padding: 80px 70px 40px;
 }
 
 /* -------------------------------------------------- Trending --------------------------------------------------- */
@@ -227,7 +252,7 @@ ul {
 
     position: absolute;
     border: 3px solid #b59f5b;
-    
+
     /* padding: 32px; */
     padding: 7.767%;
 
@@ -289,24 +314,27 @@ ul {
 }
 
 .main-layout, .shop-section {
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 6%;
+    padding-right: 6%;
     max-width: 1660px;
 }
 
 
 /* ------------ Left vertical bar ------------ */
 .blog-posts {
-    flex: 0 13 775px;
+    flex: 0 2 775px;
     display: flex;
     flex-direction: column;
     gap: 60px;
 }
 
-/* .post { */
-    /* display: block; */
+.post {
+    display: flex;
     /* gap: 31px; */
-/* } */
+    gap: 4%;
+}
 
 .post a {
     text-decoration: none;
@@ -319,18 +347,19 @@ ul {
 
 .post img {
     width: 49.16%;
+    height: auto;
     max-width: 381px;
-    aspect-ratio: 381/294;
+    /* aspect-ratio: 381/294; */
     display: block;
-
-    float: left;
-    margin-right: 4%;
+    object-fit: contain;
+    align-self: flex-start;
 }
 
 .post-text {
     /* flex: 1 0 180px; */
-    width: 100%;
-    min-width: 180px;
+    /* min-width: 180px; */
+    flex-grow: 1;
+    min-width: 0;
     /* display: flex; */
     /* flex-direction: column; */
 }
@@ -371,9 +400,9 @@ ul {
     display: flex;
     flex-wrap: wrap;
     gap: 0px 12px;
-     /* margin-top: 29px; */
     /* margin-top: 28px; */
-    margin-top: 3.61%;
+    /* margin-top: 3.61%; */
+    margin-top: 7.8%;
 }
 
 .post__data {
@@ -390,7 +419,8 @@ ul {
 
 .post__description {
     /* margin-top: 44px; */
-    margin-top: 5.677%;
+    /* margin-top: 5.677%; */
+    margin-top: 12.5%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -407,7 +437,6 @@ ul {
 /* ----------- Right vertical bar (Sidebar) ------------- */
 .sidebar {
     flex: 0 0 272px;
-    /* flex: 9; */
     /* max-width: 272px; */
     display: flex;
     flex-direction: column;
@@ -450,6 +479,10 @@ ul {
     color: #000;
 }
 
+.new-posts a:hover .new-post__text h3 {
+    text-decoration: underline;
+}
+
 .new-post img {
     display: block;
     width: 70px;
@@ -477,12 +510,6 @@ ul {
     line-height: 18px;
     text-transform: uppercase;
     font-family: "opensans-bold", sans-serif;
-
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 /* ----------- SEARCH BLOCK -------------- */
@@ -511,6 +538,12 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #323232;
 }
 
 .search-button img {
@@ -554,6 +587,11 @@ ul {
     cursor: pointer;
     text-align: center;
     border: none;
+    transition: background-color 0.3s ease;
+}
+
+.email-button:hover {
+    background-color: #323232;
 }
 
 /* -------------- TAGS BLOCK -------------- */
@@ -583,6 +621,11 @@ ul {
 .tags-item {
     padding: 4px 13px;
     border: 3px solid #eeeeee;
+    transition: border 0.3s ease;
+}
+
+.tags-item:has(a:hover) {
+    border-color: #b59f5b;
 }
 
 /* -------------- TOPICS BLOCK --------------- */
@@ -605,6 +648,11 @@ ul {
     color: #000000;
     padding: 13.5px 0;
     border-bottom: 1px solid #eeeeee;
+    transition: color 0.2s ease;
+}
+
+.topics-list li a:hover {
+    color: #b59f5b;
 }
 
 .topics-list .quantity {
@@ -624,7 +672,8 @@ ul {
 .shop-flex {
     display: flex;
     flex-wrap: wrap;
-    gap: 64px;
+    /* gap: 64px; */
+    gap: 3.85%;
     margin-top: 30px;
     justify-content: center;
 }
@@ -675,13 +724,18 @@ ul {
 .product-card__description {
     font-size: 15px;
     color: #000000;
-    line-height: 1.4;
+    line-height: 22px;
     font-family: "opensans-regular", sans-serif;
+    text-decoration: none;
 }
 
 .product-card__description a {
-    text-decoration: none;
     color: #d4b886;
+    transition: font-weight 0.2s ease;
+}
+
+.product-card__description a:hover {
+    text-decoration: underline;
 }
 
 .product-card__footer {
@@ -709,6 +763,7 @@ ul {
 
 .product-card__oldprice {
     font-size: 14px;
+    font-family: "opensans-bold", sans-serif;
     text-decoration: line-through;
     line-height: 1;
 }
@@ -726,6 +781,7 @@ ul {
     height: 48px;
     background-color: #b59f5b;
     color: white;
+    font-family: "opensans-bold", sans-serif;
     font-size: 14px;
     border: none;
     display: flex;
@@ -734,6 +790,11 @@ ul {
     cursor: pointer;
     text-decoration: none;
     text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.product-card__btn:hover {
+    background-color: #323232;
 }
 
 /* ---------------------------------------------- FOOTER -------------------------------------------------- */
@@ -772,11 +833,15 @@ ul {
     outline: none;
 }
 
-/* ---------------------------------------------- MEDIA / SUPPORTS -------------------------------------------------- */
+/* ----------------------------------------------- MEDIA CONTROLS -------------------------------------------------- */
 
-@supports (gap: 1cqw) {
-    .shop-flex {
-        gap: clamp(26px, 4.26cqw - 6.72px, 64px);
+@media (min-width: 1170px) {
+    .nav {
+        max-width: 1170px;
+    }
+
+    .header-banner img {
+        object-position: center;
     }
 }
 
@@ -797,8 +862,10 @@ ul {
     }
 
     .nav {
+        margin: 43px auto 0px;
         justify-content: space-between;
-        margin: 43px 35px 0px;
+        align-items: center;
+        width: 91%;
     }
 
     .nav-menu {
@@ -808,18 +875,23 @@ ul {
     .menu-button {
         display: flex;
     }
-    
+
     .header-banner img {
-        object-position: left;
+        object-position: center left;
     }
 
     .header__title {
+        width: 90.48vw;
+        margin-top: 10px;
+    }
+
+    .header__title h1 {
         font-size: 40px;
         line-height: 55px;
     }
 
     /* -----------------    TRENDIG  -------------------- */
-    
+
     .trending-container {
         margin-top: 46px;
     }
@@ -827,7 +899,7 @@ ul {
     .trending-flex {
         margin-top: 20px;
     }
-    
+
     .trend-card {
         width: calc((100% / 2) - (4px / 2));
         /* aspect-ratio: 386/249; */
@@ -867,22 +939,23 @@ ul {
 
 
     /* --------------- Main(posts) Section ---------------- */
-    
+
     .main-layout, .shop-section, .footer {
         /* margin-left: 35px;
         margin-right: 35px; */
-        margin-left: 4.55%;
+        margin-left: 4.45%;
         margin-right: 4.55%;
+        padding: 0;
     }
 
     .main-layout {
         margin-top: 50px;
-        gap: 35px;
+        gap: 31px;
     }
 
     /* --------------- LEFT vertical bar ---------------- */
     .blog-posts {
-        gap: 41px;
+        gap: 81px;
     }
 
     .post {
@@ -894,25 +967,28 @@ ul {
         content: "";
         display: block;
         border-bottom: 3px solid #eeeeee;
-        margin-top: 17px;
+        margin-top: -3px;
     }
 
     .post__tags {
-        margin-top: 15px;
+        margin-top: -6px;
         font-size: 14px;
     }
 
     .post__title {
         font-size: 17px;
+        line-height: 22px;
+
     }
 
     .post__data-author {
         font-size: 12px;
-        margin-top: 28px;
+        margin-top: 32px;
     }
 
     .post__description {
         font-size: 15px;
+        line-height: 22px;
         margin-top: 28px;
     }
 
@@ -928,11 +1004,13 @@ ul {
     /* ------------------ SHOP section ------------------- */
 
     .shop-section {
-        margin-top: 62px;
+        margin-top: 82px;
     }
+
     .shop-flex {
         justify-content: flex-start;
-        gap: 23px;
+        /* gap: 23px; */
+        gap: 2.99vw;
     }
 
     .product-card {
@@ -942,10 +1020,15 @@ ul {
 
     .product-card__image img {
         aspect-ratio: 290/226;
+        object-position: left;
+    }
+
+    .product-card__title h3 {
+        font-size: 17px;
     }
 
     /* -------------------- FOOTER ----------------------- */
-    
+
     .footer {
         margin-top: 50px;
     }
@@ -957,18 +1040,11 @@ ul {
 
 /*  ---------------------------- PHONES CONFIG (width: 360px) ------------------------------- */
 @media (max-width: 360px) {
-    .trend-card {
-        width: 100%;
+    .nav {
+        justify-content: end;
+        margin-top: 31px;
     }
-
-    .main-layout {
-        flex-direction: column;
-    }
-
-    .product-card {
-        flex: 0 1 100%;
-    }
-
+    
     .header {
         min-height: 640px;
     }
@@ -979,6 +1055,9 @@ ul {
 
     .logo-telef{
         display: block;
+        align-self: center;
+        width: 93%;
+        max-width: 330px;
     }
 
     .logo {
@@ -986,12 +1065,211 @@ ul {
     }
 
     .header__title {
-        /* position: absolute;
+        width: 80%;
+        margin: 0;
+        padding: 0;
+        flex: 1;
+        margin-top: -23px;
+        justify-content: center;
+        /* max-width: 225px; */
+        max-width: 330px;
+        align-self: center;
+    }
+
+    .header__title h1 {
+        margin-top: 22px;
+        font-size: 26px;
+        line-height: 36px;
+        text-wrap: wrap;
+    }
+
+    /* ------------- TRENDING ---------- */
+    .main-layout {
+        flex-direction: column;
+        margin-left: 15px;
+        margin-right: 16px;
+    }
+
+    .trending-container {
+        margin-top: 38px;
+    }
+
+    .trending-flex {
+        margin-top: 27px;
+        gap: 3px;
+    }
+
+    .section-title h2 {
+        font-size: 16px;
+    }
+
+    .trend-card {
+        width: 100%;
+        aspect-ratio: 360/231;
+    }
+
+    .product-card {
+        flex: 0 1 100%;
+    }
+
+    .trend-card__tags {
+        /* gap: 0px 18px; */
+        gap: 0px 5vw;
+    }
+
+    .trend-card__tags a {
+        /* font-size: 14px; */
+        font-size: 3.888vw;
+    }
+
+    .trend-card__title {
+        /* font-size: 16px; */
+        font-size: 4.444vw;
+        /* line-height: 20px; */
+        line-height: 5.555vw;
+        margin-top: 4px;
+    }
+
+    .trend-card__data {
+        left: 15px;
+        right: 15px;
+        bottom: 14px;
+        padding-top: 6.76vw; /* ADJUSTING */
+        /* padding-left: 20px; */
+        padding-left: 5.555vw;
+        padding-right: 5.555vw;
+        /* padding-bottom: 26px; */
+        padding-bottom: 7.5vw;
+    }
+
+     /* --------------- LEFT vertical bar ---------------- */
+    .blog-posts {
+        gap: 70px;
+        margin-top: -4px;
+    }
+
+    .post {
         display: flex;
         flex-direction: column;
+    }
+
+    .post::after {
+        content: "";
+        display: block;
+        border-bottom: 3px solid #eeeeee;
+        padding-top: 5px;
+    }
+
+    .post__tags {
+        margin-top: -6px;
+        font-size: 14px;
+    }
+
+    .post__title {
+        font-size: 16px;
+        line-height: 20px;
+
+    }
+
+    .post__data-author {
+        font-size: 12px;
+        margin-top: 19px;
+    }
+
+    .post__description {
+        margin-top: 14px;
+        padding-right: 5px; /* ADJUSTING  */
+        gap: 5px;
+    }
+
+    .post__description p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .post img {
         width: 100%;
-        height: 100%; */
-        width: 70%;
-        max-width: 225px;
+        max-width: 392px;
+    }
+
+    /* ---------- SIDEBAR (Right) ---------- */
+    .sidebar {
+        margin-top: 45px;
+    }
+
+    .sidebar-title {
+        font-size: 16px;
+    }
+
+    .new-posts {
+        margin-top: 10px;
+    }
+
+    .email {
+        margin-top: 42px;
+    }
+
+    .email-input {
+        margin-top: 5px;
+    }
+
+    .tags {
+        margin-top: 42px;
+    }
+
+    .tags-item {
+        font-size: 12px;
+    }
+
+    .topics {
+        margin-top: 27px;
+    }
+
+    .topics-list {
+        margin-top: -6px; /* ADJUSTING */
+    }
+
+    /* -------------- SHOP SECTION ----------------*/
+    .shop-section {
+        margin-top: 26px;
+    }
+
+    .shop-flex {
+        margin-top: 32px; /* ADJUSTING */
+        gap: 28px;
+        /* gap: 2.99vw; */
+    }
+
+    .product-card {
+        flex: 0 1 100%;
+    }
+
+    .product-card__content {
+        padding: 48px 16px 25px;
+        min-height: 215px;
+        margin: -30px auto 0;
+    }
+
+    .product-card__image img {
+        aspect-ratio: 282/282;
+        object-position: left;
+    }
+
+    .product-card__title h3 {
+        font-size: 17px;
+    }
+
+    .product-card__footer {
+        margin-top: 20px;
+        margin-right: 5px;
+    }
+
+    .product-card__btn {
+        max-width: 140px;
+    }
+
+    /* ------- FOOTER -------*/
+    .footer {
+        margin-top: 42px;
     }
 }
